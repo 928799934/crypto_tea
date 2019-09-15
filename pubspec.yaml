@@ -1,8 +1,8 @@
 name: crypto_tea
-description: A starting point for Dart libraries or applications.
-# version: 1.0.0
-# homepage: https://www.example.com
-# author: lijian <lijian@cmcm.com>
+description: A tea crypto for Dart libraries or applications.
+version: 0.0.1
+homepage: https://github.com/928799934/crypto_tea
+author: lijian <lijian@cmcm.com>
 
 environment:
   sdk: '>=2.4.0 <3.0.0'
