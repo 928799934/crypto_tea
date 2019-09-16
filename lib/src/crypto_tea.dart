@@ -1,4 +1,5 @@
 import 'dart:typed_data';
+import "package:hex/hex.dart";
 
 import 'utils.dart';
 import 'padding.dart';
@@ -30,8 +31,16 @@ class tea {
   factory tea(List<int> key, wheel wheel, paddingBase padding) =>
       tea._(key, wheel, padding);
 
-  List<int> encrypt(List<int> src) {
+  String encryptString(String src) {
+    return HEX.encode(this.encrypt(src.codeUnits));
+  }
 
+  String decryptString(String src) {
+    return String.fromCharCodes(this.decrypt(HEX.decode(src)));
+  }
+
+
+  List<int> encrypt(List<int> src) {
     src = (this._padding as paddingBase).Padding(src, _blockSize);
     for (var i = 0; i < src.length;) {
       var firstChunk = byteToUint32(src.sublist(i, i + this._byteSize));

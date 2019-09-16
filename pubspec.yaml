@@ -1,13 +1,14 @@
 name: crypto_tea
 description: A tea crypto for Dart libraries or applications.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/928799934/crypto_tea
 author: lijian <lijian@cmcm.com>
 
 environment:
   sdk: '>=2.4.0 <3.0.0'
 
-#dependencies:
+dependencies:
+  hex: ^0.1.2
 #  path: ^1.6.0
 
 dev_dependencies:
